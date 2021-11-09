@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "bierner.comment-tagged-templates",
+    "graphql.vscode-graphql",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
