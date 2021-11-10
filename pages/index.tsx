@@ -186,6 +186,33 @@ const Home: NextPage<{ date: string }> = ({ date }) => {
           name="description"
           content="Chaingraph is an open-source, multi-node blockchain indexer and GraphQL API. Powerful, nested queries and horizontally-scalable live subscriptions, deployed on your own infrastructure."
         />
+        <meta
+          property="og:title"
+          content="Chaingraph | blockchain indexer and GraphQL API"
+        />
+        <meta
+          property="og:description"
+          content="Chaingraph is an open-source, multi-node blockchain indexer and GraphQL API. Powerful, nested queries and horizontally-scalable live subscriptions, deployed on your own infrastructure."
+        />
+        <meta
+          property="og:image"
+          content="https://chaingraph.cash/social.png"
+        />
+        <meta property="og:url" content="https://chaingraph.cash/" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ChaingraphCash" />
+        <meta
+          name="twitter:title"
+          content="Chaingraph | blockchain indexer and GraphQL API"
+        />
+        <meta
+          name="twitter:description"
+          content="Chaingraph is an open-source, multi-node blockchain indexer and GraphQL API. Powerful, nested queries and horizontally-scalable live subscriptions, deployed on your own infrastructure."
+        />
+        <meta
+          name="twitter:image"
+          content="https://chaingraph.cash/social.png"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
