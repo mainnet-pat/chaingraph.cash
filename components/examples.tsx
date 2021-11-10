@@ -113,7 +113,7 @@ export const exampleQueries: Example[] = [
       </>
     ),
     name: 'Monitor Address for Payments',
-    query: /* graphql */ `subscription Monitor {
+    query: /* graphql */ `subscription MonitorForPayments {
   search_output(
     args: {
       locking_bytecode_hex: "{76a914f77f2d9ab6cc90f2e2bef66c78c7c0a33475be5688ac}"
@@ -323,7 +323,7 @@ export const exampleQueries: Example[] = [
     name: 'Get Transaction Details',
     query: /* graphql */ `query GetTransactionDetails {
   transaction(where: { hash: { _eq:
-  "\\\\xf4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16"
+  "\\\\x978306aa4e02fd06e251b38d2e961f78f4af2ea6524a3e4531126776276a6af1"
   } } ) {
     authchains {
       authchain_length
