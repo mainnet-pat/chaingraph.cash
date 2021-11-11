@@ -139,7 +139,7 @@ const ExampleComponent = () => {
                   setActiveSubscription(true);
                 }}
               >
-                Start Subscription ❯
+                Run Subscription ❯
               </div>
             </div>
           )
