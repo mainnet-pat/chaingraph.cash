@@ -14,8 +14,8 @@ require('prismjs/components/prism-json');
 // const secureApi = false;
 // const hostAndPort = 'localhost:8080';
 
-const secureApi = true;
-const hostAndPort = 'demo.chaingraph.cash';
+const secureApi = process.env.NEXT_PUBLIC_SECUREAPI ?? true;
+const hostAndPort = process.env.NEXT_PUBLIC_HOSTANDPORT ?? 'demo.chaingraph.cash';
 
 // https://github.com/nearform/graphql-hooks/issues/681
 const ssr = typeof window === 'undefined';

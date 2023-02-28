@@ -1,8 +1,8 @@
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { useSubscription, useQuery } from 'graphql-hooks';
-import { useState } from 'react';
+import { useSubscription, useQuery, ClientContext } from 'graphql-hooks';
+import { useContext, useState } from 'react';
 import Highlight from 'prism-react-renderer';
 import Prism from 'prismjs';
 import { exampleQueries } from '../components/examples';
@@ -178,6 +178,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const Home: NextPage<{ date: string }> = ({ date }) => {
+  const client = useContext(ClientContext) as any;
   return (
     <div className={styles.container}>
       <Head>
@@ -265,7 +266,7 @@ const Home: NextPage<{ date: string }> = ({ date }) => {
         >
           Setup Guide
         </a>
-        <a className={styles.secondaryCta} href="https://try.chaingraph.cash">
+        <a className={styles.secondaryCta} href={`try/index.html?graphql=${client.url}`}>
           Try the API ❯
         </a>
       </div>
@@ -301,7 +302,7 @@ const Home: NextPage<{ date: string }> = ({ date }) => {
         >
           Setup Guide
         </a>
-        <a className={styles.secondaryCta} href="https://try.chaingraph.cash">
+        <a className={styles.secondaryCta} href={`try/index.html?graphql=${client.url}`}>
           Try the API ❯
         </a>
       </div>

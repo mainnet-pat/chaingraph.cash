@@ -10,12 +10,14 @@
     "bitauth",
     "bitjson",
     "Chaingraph",
+    "HOSTANDPORT",
     "locktime",
     "logrocket",
     "merkle",
     "overscroll",
     "prismjs",
-    "satoshis"
+    "satoshis",
+    "SECUREAPI"
   ],
   "flagWords": [],
   "ignorePaths": [
