@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { useSubscription, useQuery, ClientContext } from 'graphql-hooks';
 import { useContext, useState } from 'react';
@@ -362,6 +363,23 @@ const Home: NextPage<{ date: string }> = ({ date }) => {
 
       <div className={styles.madeBy}>
         made by&nbsp;<a href="https://bitjson.com/">bitjson</a>
+      </div>
+
+      <div className={styles.madeBy} style={{display: "flex", flexDirection: "column", alignItems: "center", marginBottom: 30}}>
+        <div>This instance is brought to you by <a href={process.env.NEXT_PUBLIC_MAINTAINER_HREF!}>{process.env.NEXT_PUBLIC_MAINTAINER_NAME!}</a></div>
+        <div>
+          <a href={`${process.env.NEXT_PUBLIC_MAINTAINER_ADDRESS}?amount=0.1337`}>
+            <Image
+              width={150}
+              height={150}
+              src={process.env.NEXT_PUBLIC_MAINTAINER_QR_SRC!}
+              title={process.env.NEXT_PUBLIC_MAINTAINER_ADDRESS!}
+              alt={process.env.NEXT_PUBLIC_MAINTAINER_ADDRESS!}
+            />
+          </a>
+        </div>
+        <div>{process.env.NEXT_PUBLIC_MAINTAINER_CASHACCOUNT!}</div>
+        <span>{process.env.NEXT_PUBLIC_MAINTAINER_ADDRESS!}</span>
       </div>
     </div>
   );
